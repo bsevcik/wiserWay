@@ -12,9 +12,16 @@
 
     <!-- Custom Styles -->
     <style>
+        .header-transparent > * {
+            color: #34343c;
+        }
+        .titleBarOffset {
+            height: 90px;
+        }
         .customCode {
             background: url("http://www.wiserwaymedia.com/wp-content/uploads/2019/05/bgImage.jpg") no-repeat center;
             background-size: 100%;
+            min-height: 600px
         }
         #howWeWork {
             font-size: 4em;
@@ -53,10 +60,13 @@
             }
             .howItWorksContainer .col-md-3 div {
             height: auto;
-        }
+            }
+            .titleBarOffset {
+                display: none;
+            }
         }
     </style>
-    
+    <div class="titleBarOffset"></div>
     <div class="container-fluid customCode">
         <h1 id="howWeWork">How We Work</h1>
         <div class="row howItWorksContainer">
@@ -98,5 +108,21 @@
             </div>
         </div>
     </div>
+    <script> 
+        
+        document.addEventListener("scroll", 
+            function (e) {
+                console.log(e);
+                if (window.pageYOffset == 0 || document.documentElement.scrollTop == 0 || document.body.scrollTop == 0) {
+                    setTimeout(
+                        function() {
+                            document.getElementsByTagName("header")[0].classList.add("header-shrink");
+                        }
+                    , 1000)
+                }
+            }
+        );
+
+    </script>
 </body>
 </html>

@@ -17,9 +17,9 @@
         }
         .container-fluid p {
             width: 50%;
-            text-align: center;
+            margin: 10px auto;
         }
-        br {
+        .post-content br {
             display: none;
         }
         .customCode {
@@ -61,20 +61,27 @@
             text-align: center;
         }
         .creativity > div:nth-child(1)  {
-            background: url("../images/action-adult-advice.jpg");
-            background-size: 100%;
+            background: url("http://www.wiserwaymedia.com/wp-content/uploads/2019/05/blackboard.jpg") no-repeat center center;
+            background-size: cover;
+            /* background-attachment: fixed; */
         }        
         .accessibility > div:nth-child(2)  {
-            background: url("../images/action-adult-advice.jpg");
-            background-size: 100%;
+            background: url("http://www.wiserwaymedia.com/wp-content/uploads/2019/05/action-adult-advice.jpg") no-repeat center center;
+            background-size: cover;
+            /* background-attachment: fixed; */
         }
         .affordability > div:nth-child(1)  {
-            background: url("../images/action-adult-advice.jpg");
-            background-size: 100%;
+            background: url("http://www.wiserwaymedia.com/wp-content/uploads/2019/05/business-deal.jpg") no-repeat center center;
+            background-size: cover;
+            /* background-attachment: fixed; */
         }        
         .education > div:nth-child(2)  {
-            background: url("../images/action-adult-advice.jpg");
-            background-size: 100%;
+            background: url("http://www.wiserwaymedia.com/wp-content/uploads/2019/05/businesswoman.jpg") no-repeat left center;
+            background-size: cover;
+            /* background-attachment: fixed; */
+        }
+        .col-md-6 {
+            min-height: 600px;
         }
         h1 {
             padding: 80px 0 20px 0;
@@ -96,13 +103,15 @@
             color: white; 
             margin-bottom: 30px;
         }
-
         @media screen and (max-width: 992px) {
             .customCode {
                 background-size: auto;
             }
             .howItWorksContainer .col-md-3 div {
             height: auto;
+            }
+            .col-md-6 {
+                min-height: 400px;
             }
         }
     </style>
@@ -119,7 +128,7 @@
     </div>
     <div class="container-fluid">
         <div class="row creativity">
-            <div class="col-md-6">
+            <div class="col-md-6  order-last order-md-first">
             </div>
             <div class="col-md-6">
                 <h1>CREATIVITY</h1>
@@ -145,7 +154,7 @@
     </div>
     <div class="container-fluid">
             <div class="row affordability">
-                <div class="col-md-6">
+                <div class="col-md-6 order-last order-md-first">
     
                 </div>
                 <div class="col-md-6">
